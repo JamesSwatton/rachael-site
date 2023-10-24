@@ -5,19 +5,19 @@
                 <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
             </h2>
             <div class="D(f) Jc(sb)">
-                <time class="Fs(i) C(lightslategray)" datetime="{{entry.data.date}}">{{ entry.data.date | readableDate }}</time>
-                <div>
+                <time class="Fs(i) C(lightslategray) Miw(fc) Mend(2em)" datetime="{{entry.data.date}}">{{ entry.data.date | readableDate }}</time>
+                <div class="Ta(end)">
                     {% for tag in entry.data.tags | filterTagList %}
                         {% set tagUrl = ["/tags/", tag, "/"] | join %}
-                        <a href="{{ tagUrl | url }}">{{ tag }}</a> |
+                        <a href="{{ tagUrl | url }}">{{ tag }}</a> 
+                        {% if tag !== entry.data.tags | reverse | first %}
+                             | 
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
-            {% if entry.data.content %}
-                <p>{{ entry.data.content | truncate(250) | safe }}</p>
-            {% endif %}
         </li>
-        {% if entry !== postsList | reverse | last %}
+        {% if entry !== postsList | first  %}
             <hr>
         {% endif %}
     {% endfor %}

@@ -3,12 +3,15 @@ layout: _layouts/base.njk
 ---
 <hr>
 
-<div class="Mb(40px)">
-<p class="Fs(i)">{{ authors | join(", ")}} ({{ year }})</p>
+<div class="Bdbs(da) Bdbw(t) Bdbc(gray) Pb(1em) Mb(1em) ">
+    <p class="Fs(i) Mb(0)">{{ authors | join(", ")}} ({{ year }})</p>
+    <a href="{{ journalURL }}">{{ journal }}</a>
 
-<a class="Bg(n):hover"href="{{ publicationPath | url }}" download="">
-    <button>Download</button>
-</a>
+    {% if publicationPath %}
+        <a class="D(b) Mt(1em) Bg(n):hover"href="{{ publicationPath | url }}" download="">
+            <button>Download</button>
+        </a>
+    {% endif %}
 </div>
 
 <h2>Abstract</h2>

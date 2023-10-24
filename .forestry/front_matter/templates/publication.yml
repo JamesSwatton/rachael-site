@@ -1,0 +1,55 @@
+---
+label: Publication
+hide_body: false
+fields:
+- type: textarea
+  name: title
+  label: Title
+  config:
+    required: true
+    wysiwyg: false
+- type: list
+  name: authors
+  label: Authors
+  config:
+    use_select: false
+    min: 1
+- type: number
+  name: year
+  label: Year
+  config:
+    required: true
+  default: 
+- type: text
+  name: journal
+  label: Journal
+  description: Name of the journal
+- name: journalURL
+  type: text
+  config:
+    required: true
+  label: Journal URL
+  description: Make sure to include https:// at the beginning or URL
+- type: file
+  name: publicationPath
+  label: Document
+  description: Preferably PDF format
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: _layouts/publication.njk
+pages:
+- publications/autism-and-bilingualism-a-thematic-analysis-of-practitioners-experiences.md
+- publications/being-autistic-and-bilingual-a-thematic-analysis-of-the-experiences-of-autistic-bilingual-adults-living-in-the-uk.md
+- publications/computational-modeling-of-interventions-for-developmental-disorders.md
+- publications/evolutionary-motor-biases-and-cognition-in-children-with-and-without-autism.md
+- publications/gaze-behaviour-to-lateral-face-stimuli-in-infants-who-do-and-do-not-receive-an-asd-diagnosis.md
+- publications/helping-autistic-children.md
+- publications/measuring-the-impact-of-bilingualism-on-executive-functioning-via-inhibitory-control-abilities-in-autistic-children.md
+- publications/should-we-expect-bilingualism-to-confer-cognitive-benefits-in-children-with-autism-spectrum-disorders.md
+- publications/social-gaze-in-preterm-infants-may-act-as-an-early-indicator-of-atypical-lateralization.md
+- publications/the-impact-of-bilingualism-on-social-attentional-preferences-in-autistic-children-preprint.md
+- publications/the-left-cradling-bias-an-evolutionary-facilitator-of-social-cognition.md
+- publications/the-over-pruning-hypothesis-of-autism.md
+- publications/why-study-bilingualism-in-autistic-people.md

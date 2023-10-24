@@ -1,0 +1,59 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: document
+  path: index.md
+  label: Home
+- type: document
+  path: about.md
+  label: About me
+- type: document
+  path: research.md
+  label: Research blurb
+- type: directory
+  path: research
+  label: Research
+  create: all
+  match: "**/*"
+  exclude: "*.json"
+  templates:
+  - research-project
+- type: directory
+  path: publications
+  label: Publications
+  create: all
+  match: "**/*"
+  exclude: "*.json"
+  templates:
+  - publication
+- type: directory
+  path: posts
+  label: Posts
+  create: all
+  match: "**/*"
+  exclude: "*.json"
+  templates:
+  - blog-post
+- type: document
+  path: links.md
+  label: Links
+- type: document
+  path: cv.md
+  label: CV
+- type: document
+  path: _data/metadata.json
+  label: Site data
+upload_dir: assets/img
+public_path: "/assets/img"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run develop

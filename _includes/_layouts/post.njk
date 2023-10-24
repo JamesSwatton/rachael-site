@@ -7,7 +7,10 @@ layout: _layouts/base.njk
         <div>
             {% for tag in tags | filterTagList %}
                 {% set tagUrl = ["/tags/", tag, "/"] | join %}
-                <a href="{{ tagUrl | url }}">{{ tag }}</a> |
+                <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                {% if tag !== tags | filterTagList | reverse | first %}
+                    | 
+                {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -15,9 +18,10 @@ layout: _layouts/base.njk
     {{ content | safe }}
 </div>
 
-{% if collections.posts %}
-    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set posts = collections.posts | reverse %}
+{% if posts %}
+    {% set nextPost = posts | getNextCollectionItem(page) %}
+    {% set previousPost = posts | getPreviousCollectionItem(page) %}
     {% if nextPost or previousPost %}
         <div class="D(f) Jc(sb) W(3em) M(a)">
             {% if previousPost %}

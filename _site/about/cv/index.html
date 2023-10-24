@@ -13,24 +13,24 @@
     <script src="/assets/js/scroll.js"></script>
     <title>CV </title>
 </head>
-<body class="Bgc(mainColour)">
+<body class="D(f) Fxd(c) Fxb(a) Bgc(mainColour)">
 
     <header class="Px(10px) Px(1.5em)--sm Pt(10px) Pt(1.2em)--sm Pos(r) Bgc(mainColour) Pos(st) T(0)
         Bdbs(do) Z(1)">
 
         <!-- large name -->
         <h1 id="logo--lg" class="D(n) D(b)--md Fz(4em) M(0)">
-            <a href="/" class="C(black):link C(black):visited">Rachael Davis</a>
+            <a href="/" class="C(black):link C(black):visited">Dr Rachael Davis</a>
         </h1>
 
         <!-- medium name -->
         <h1 id="logo--md" class="D(n) D(b)--sm D(n)--md Fz(3em)--sm M(0)">
-            <a class="C(black):link C(black):visited" href="/">Rachael Davis</a>
+            <a class="C(black):link C(black):visited" href="/">Dr Rachael Davis</a>
         </h1>
 
         <!-- small name -->
         <h1 id="logo--sm" class="D(n)--sm M(0)">
-            <a class="C(black):link C(black):visited" href="/">Rachael Davis</a>
+            <a class="C(black):link C(black):visited" href="/">Dr Rachael Davis</a>
         </h1>
 
         <div id="mini-bio" >
@@ -43,70 +43,72 @@
         
         
         
-        
-            <a href="/about/" class="
-                BdB Bd(0):hover
+            <a href="/about/" class=" BdB Bd(0):hover
              C(blue):link C(blue):visited">
                 About
-            </a> |
-        
+            </a>
+            
+                | 
+            
     
         
         
         
-        
-            <a href="/publications/" class=" C(red):link C(red):visited">
-                Publications
-            </a> |
-        
-    
-        
-        
-        
-        
-            <a href="/research/" class=" C(green):link C(green):visited">
+            <a href="/research/" class=" C(red):link C(red):visited">
                 Research
-            </a> |
-        
+            </a>
+            
+                | 
+            
     
         
+        
+        
+            <a href="/publications/" class=" C(green):link C(green):visited">
+                Publications
+            </a>
+            
+                | 
+            
+    
         
         
         
             <a href="/blog/" class=" C(orange):link C(orange):visited">
                 Blog
-            </a> |
-        
+            </a>
+            
+                | 
+            
     
-        
         
         
         
             <a href="/links/" class=" C(purple):link C(purple):visited">
                 Links
-            </a> |
-        
+            </a>
+            
     
 </nav>
 
         
 
 <nav class="D(n)--sm D(f) Jc(sb) Mb(0.5em)">
-	<div class="drop Pos(r) C(lightslategray):h">
-		Menu
-		<div class="D(n) drop:h_D(b) Z(2)">
+	<div class="Pos(r)">
+		<p id="menu-btn" class="M(0) P(0) Cur(p) C(lightslategray):h">Menu</p>
+		<div id="menu-dropdown" class="D(n) Z(2)">
 			
 				
 				<a href="/about/" class="D(b) Mstart(1em) P(2px)
 				C(blue):link C(blue):visited">About</a>
 			
 				
-				<a href="/publications/" class="D(b) Mstart(1em) P(2px)
-				C(red):link C(red):visited">Publications</a>
+				<a href="/research/" class="D(b) Mstart(1em) P(2px)
+				C(red):link C(red):visited">Research</a>
 			
 				
-				<a href="/research/" class="D(b) Mstart(1em) P(2px)
-				C(green):link C(green):visited">Research</a>
+				<a href="/publications/" class="D(b) Mstart(1em) P(2px)
+				C(green):link C(green):visited">Publications</a>
 			
 				
 				<a href="/blog/" class="D(b) Mstart(1em) P(2px)
@@ -128,335 +130,214 @@
 	</div>
 </nav>
 
+<script>
+	document.getElementById("menu-btn").addEventListener("click",
+		function(event) {
+			document.getElementById("menu-dropdown").classList.toggle("D\(n\)");
+			document.getElementById("menu-dropdown").classList.toggle("D\(b\)");
+			document.getElementById("menu-btn").classList.toggle("C\(lightslategray\)");
+		})
+
+	window.addEventListener("click", function(event) {
+		if (!event.target.matches("#menu-btn")) {
+			document.getElementById("menu-btn").classList.remove("C\(lightslategray\)");
+			document.getElementById("menu-dropdown").classList.remove("D\(b\)")
+			document.getElementById("menu-dropdown").classList.add("D\(n\)")
+		}
+	})
+</script>
+
     </header>
 
-    <main class="Maw(850px) M(a) Px(10px) Px(2em)--sm">
-        <!-- remove dashed bottom border if a publication -->
-        
-            <h1 class=" Bdbs(da) Bdbw(t) D(ib)
-            ">CV</h1>
-        
-        <div class="Bdbs(da) Bdbw(t) Pb(2rem) Bdbc(gray)">
+            <main class="Fxg(1) Fxb(a) Maw(850px) M(a) Px(10px) Px(2em)--sm">
+                <!-- remove dashed bottom border if a publication -->
+                
+                    <h1 class=" 
+                    Bdbs(da) Bdbw(t) D(ib)">
+                    CV</h1>
+                
+                <div class="Bdbs(da) Bdbw(t) Pb(1rem) Bdbc(gray)">
     <a class="Bg(n):hover"href="/assets/CV.pdf" download="cv.pdf">
         <button>Download</button>
     </a>
 </div>
 
+    <ul id="headings" class="Bdbs(da) Bdbw(t) Pb(1em) Bdbc(gray)">
+    </ul>
 <h2>EDUCATION</h2>
 <h3>2013-2017</h3>
-<p><strong>PhD Psychology</strong>, Centre for Brain and Cognitive Sciences, Birkbeck,
-*University of London.
-Thesis: “An Empirical and Computational Investigation of Variable outcomes in
-Autism Spectrum Disorders”.  Supervised by Professor Michael Thomas and
-Professor Tony Charman.</p>
-<p>My doctoral research aimed to investigate the variability observed in the
-profiles of autistic children, our ability to predict this variability based on
-measures in early infancy, and the underlying mechanisms that generate this
-variability. I combined the analysis of the of data from the world’s largest
-prospective, longitudinal dataset of children with an increased familial
-likelihood of autism, with data generated from computational models that I
-designed and created. I analysed complex datasets with sophisticated
-longitudinal modelling techniques. I received funding for this research from a
-Bloomsbury Colleges Scholarship.</p>
+<p><strong>PhD Psychology</strong>, Centre for Brain and Cognitive Sciences, Birkbeck, University of London. Thesis: “<strong>An Empirical and Computational Investigation of Variable outcomes in Autism Spectrum Disorders</strong>”.  Supervised by Professor Michael Thomas and Professor Tony Charman.</p>
+<p>My doctoral research aimed to investigate the variability observed in the profiles of autistic children, our ability to predict this variability based on measures in early infancy, and the underlying mechanisms that generate this variability. I combined the analysis of the of data from the world’s largest prospective, longitudinal dataset of children with an increased familial likelihood of autism, with data generated from computational models that I designed and created. I analysed complex datasets with sophisticated longitudinal modelling techniques. I received funding for this research from a Bloomsbury Colleges Scholarship.</p>
 <h3>2010-2012</h3>
 <p><strong>MSc Cognitive Neuroscience</strong> <em>(Distinction)</em> - University College London &amp;
 Birkbeck, University of London.</p>
-<p>Dissertation: Tool Use and the Flexibility of the Body Schema in Typically
-Developing Children. Supervised by Dr Andrew Bremner.</p>
+<p>Dissertation: Tool Use and the Flexibility of the Body Schema in Typically Developing Children. Supervised by Dr Andrew Bremner.</p>
 <h3>2006-2009</h3>
 <p><strong>BSc(Hons) Psychology</strong>, Goldsmiths, University of London.</p>
 <hr>
 <h2>EMPLOYMENT</h2>
-<h3>January 2018 - present</h3>
-<p><strong>Postdoctural Research Fellow</strong>, Salvesen Mindroom Research Centre, University
-of Edinburgh.</p>
-<p>I am the project manager lead researcher on an innovative project investigating
-the effects of bilingualism on cognitive and social development in children with
-and without autism. I am responsible for all aspects of project design and
-implementation. This included designing and implementing four novel eye tracking
-paradigms for use with minimally verbal children, and designing parent interview
-tools. I was responsible for writing project protocols, conducting analyse and
-data management, ethical approval, and all public engagement and dissemination
-activities, including writing publications and grants. I am the chair and
-organiser of advisory board meetings and have been the line manager for a
-research assistant since 2019.</p>
+<h3>June 2021 - Present</h3>
+<p><strong>Lecturer in Psychology &amp; Education</strong>, Queen Margaret University, Edinburgh. See below for academic service and Dissertation supervision.</p>
+<p>I currently teach on:</p>
+<ul>
+<li>Childhood Development</li>
+<li>Inclusive Practice/ Inclusive Learning: Difference and Diversity</li>
+<li>Foundations of Psychology</li>
+<li>Introduction to Education in the 21st Century</li>
+<li>Learning Accross the Lifespan</li>
+</ul>
+<p>I am the module coordinator for the 4th year research module, Professional Enquiry into Practice.</p>
+<h3>January 2018 - June 2021</h3>
+<p><strong>Postdoctoral Research Fellow</strong>, Salvesen Mindroom Research Centre, University of Edinburgh.</p>
+<p>I led an ESRC-funded project investigating the effects of bilingualism on cognitive and social development in children with and without autism. This included designing and implementing four novel eye tracking paradigms for use with minimally verbal children, and designing parent interview tools.</p>
 <h3>January 2017 - December 2017</h3>
-<p><strong>Postdoctoral Research Assistant</strong>, Centre for Brain and Cognitive Sciences,
-Birkbeck, University of London.</p>
-<p>This aim of this research project was to assess motor abilities and identify
-possible differences in cerebral lateralisation in children with and without
-autism. I co-designed the methodologies including designing new qualitative and
-quantitative communication surveys for teachers. I organised and conducted data
-collection sessions for 120 children, and was responsible for data analysis, and
-dissemination of findings through, conference presentations and co-authoring two
-journal articles.</p>
+<p><strong>Postdoctoral Research Assistant</strong>, Centre for Brain and Cognitive Sciences,Birkbeck, University of London.</p>
+<p>This aim of this research project was to assess motor abilities and identify possible differences in cerebral lateralisation in children with and without autism.</p>
 <h3>Jan 2017 - May 2018</h3>
-<p><strong>Associate Lecturer Birkbeck</strong>, University of London. Please see section 4 for
-all teaching and supervision activities.</p>
-<h3>September 2009 - August 2015</h3>
-<p><strong>Teaching Assistant</strong> (full time: 2009-2011, 0.3 FTE: 2011-2015), primary and
-secondary schools, London.</p>
+<p><strong>Associate Lecturer in Psychology, Birkbeck</strong>, University of London.</p>
+<h3>September 2009 - August 2014</h3>
+<p><strong>Teaching Assistant</strong> (full time: 2009-2011, 0.3 FTE: 2011-2015)</p>
 <hr>
 <h2>RESEARCH</h2>
 <h3>Current research interests</h3>
-<p>I am a developmental psychologist and my research focuses on two main areas: (1)
-Using longitudinal methods to understand early differences in cognitive
-development, and the subsequent effects on later developmental outcomes. (2)
-eliciting children’s voices to inform best practice in educational and family
-settings. This strand of my research is Informed primarily by my experience as a
-teaching assistant. In both areas I implement novel and engaging methodologies
-to include children who are frequently excluded from research, including
-minimally verbal children and children with intellectual disabilities.</p>
-<p>Central to this work is a commitment to involving the communities that I study
-in the research process; ensuring this research has a strong participatory ethos
-and is of direct and practical relevancetothoseitaffects.
-Iachievethisthroughacomprehensiveprogrammeofdissemination, dialogue and
-partnership activities. I am also a strong advocate of public engagement and
-community outreach; ensuring that research is accessible to the public, to
-policy makers and practitioners, and – importantly – to stakeholders.</p>
+<p>I am a developmental psychologist and my research focuses on two main areas: (1) Using longitudinal methods to understand early differences in cognitive development, and the subsequent effects on later developmental outcomes. (2) eliciting children’s voices to inform best practice in educational and family settings. This strand of my research is Informed primarily by my experience as a teaching assistant. In both areas I implement novel and engaging methodologies to include children who are frequently excluded from research, including minimally verbal children and children with intellectual disabilities.</p>
+<p>Central to this work is a commitment to involving the communities that I study in the research process; ensuring this research has a strong participatory ethos and is of direct and practical relevance to those it affects. I achieve this through a comprehensive programme of dissemination, dialogue and partnership activities. I am also a strong advocate of public engagement and community outreach; ensuring that research is accessible to the public, to policy makers and practitioners, and – importantly – to stakeholders.</p>
 <h3>Peer-reviewed articles and preprints under review</h3>
-<p>Forrester, GS., <strong>Davis, R.</strong>, Mareschal, D., Malatesta, G., &amp; Todd, B (2020)
-Evolutionary Motor Biases and Cognition in Children with and without Autism.
-<em>Scientific Reports</em>. DOI: 10.1038/s41598- 020-74224-4</p>
-<p><strong>Davis, R.</strong>, &amp; Crompton CJ. (2020) What do findings about social interactions in
-autistic adults mean for neurodevelopmental disorder research? <em>Perspectives in</em>
-<em>Psychological Science</em>. DOI: 10. 1177/1745691620958010</p>
-<p><strong>Davis, R.</strong>, Montgomery, L., Rabagliati H., Sorace, A., &amp; Fletcher-Watson, S.
-(2020) Should we expect bilingualism to confer cognitive benefits in children
-with Autism Spectrum Disorders? Accepted, <em>Review Journal of Autism and</em>
-<em>Developmental Disorders</em> (Preprint: DOI:10.31219/osf.io/encpw).</p>
-<p><strong>Davis, R.</strong>, Nordahl-Hansen, A., Den Houting, J., &amp; Fletcher-Watson. Helping
-children with Autism. Accepted Book Chapter, ahead of publication in
-<em>Wiley-Blackwell Handbook of Childhood Social Development, 3rd Edition</em>.</p>
-<p>Donati, G., <strong>Davis, R.</strong>, Forrester, GS. (2020) Gaze behaviour to lateral face
-stimuli in infants who do and do not gain an ASD diagnosis. <em>Scientific Reports</em>.
-DOI: 10.1038/s41598-020-69898-9</p>
-<p><strong>Davis, R.</strong>, Mohammed, F. B., &amp; Sargent L. (2020) Practitioner perspectives
-towards autism and bilingualism on socio-cultural factors and family
-experiences. <em>Under Review</em>. Preprint: 10. 31219/osf. io/fcpk2</p>
-<p>Thomas, M. S., Fedor, A., <strong>Davis, R.</strong>, Yang, j., Alireza, H., Charman, T.,
-Masterson, J., &amp; Best, W. (2019) Computational modelling of Interventions for
-developmental disorders. <em>Psychological Review</em>.</p>
-<p>Forrester, GS., <strong>Davis, R.</strong>, Mareschal, D., Malatesta, G., &amp; Todd, B (2018). The
-left cradling bias: An evolutionary facilitator of social cognition? <em>Cortex</em>.</p>
-<p>Thomas, M. S., <strong>Davis, R.</strong>, Karmiloff‐Smith, A., Knowland, V. C., &amp; Charman, T.
-(2016). The over‐pruning hypothesis of autism. <em>Developmental science</em>.</p>
+<p>See <a href="https://rachael-davis.com/publications/">Publications</a> tab or <a href="https://scholar.google.co.uk/citations?user=lLgmGWQAAAAJ&amp;hl=en">Google Scholar</a></p>
 <h3>Published protocols</h3>
-<p><strong>Davis, R.</strong> Montgomery, L., Rabagliati, H., Sorace, A., Fletcher-Watson,S.
-Charting the impact of bilingualism on social attentional preferences in
-children with and without autism. <em>Open Science Framework</em>: DOI:
-10.17605/OSF.IO/75PHW</p>
-<p>Montgomery L., <strong>Davis, R.</strong>, Chondrogianni, V., Sorace, A., Rabagliati, H., &amp;
-Fletcher-Watson, S. The effects of bilingualism on executive inhibitory
-processes in children with autism.</p>
-<h3>Works in progress</h3>
-<p><strong>Davis, R.</strong>, Donati G., &amp; Forrester, GS (2020) Associations between visual
-field biases for social
-stimuli and cognitive development in preterm and term infants.</p>
-<p><strong>Davis, R.</strong>, Montgomery, L., Rabagliati, H., Sorace, A., Fletcher-Watson, S.
-Understanding the impact of bilingualism on social attentional preferences in
-children with and without autism.</p>
-<p>Montgomery, L., Chondrogianni, V., Rabagliati, H., Sorace, A., Fletcher-Watson,
-<strong>Davis, R.</strong> Charting the impact of bilingualism on inhibitory control for
-children with and without autism.</p>
+<p><strong>Davis, R.</strong> Montgomery, L., Rabagliati, H., Sorace, A., Fletcher-Watson,S. Charting the impact of bilingualism on social attentional preferences in children with and without autism. <em>Open Science Framework</em>: <a href="https://osf.io/75phw/">DOI: 10.17605/OSF.IO/75PHW.</a></p>
+<p>Montgomery L., <strong>Davis, R.</strong>, Chondrogianni, V., Sorace, A., Rabagliati, H., &amp; Fletcher-Watson, S. The effects of bilingualism on executive inhibitory processes in children with autism. <em>Open Science Framework</em>: <a href="https://osf.io/dpsv4/">DOI 10.17605/OSF.IO/DPSV4</a></p>
 <h3>Research grants and awards</h3>
-<p>2018: Motor biases and cerebral lateralisation <strong>Waterloo Foundation, Child</strong>
-<strong>Development Scheme</strong> (£9,500). Awarded to: Gillian Forrester, Rachael Davis,
-Brenda Todd.
-Role: Co-investigator.</p>
-<p>2017: <strong>Nancy Lurie Marks Family Foundation</strong> Cold Spring Harbor Laboratories Summer
-School Travel Award £2600.</p>
-<p>2017: Creating computational models of interventions to understand variability
-in autism. <strong>Birkbeck Wellcome Trust Institutional Strategic Support Fund</strong>
-(£15,550). Awarded to: Rachael Davis and Michael Thomas.
-Role: Principal Investigator.</p>
-<p>2017: <strong>Bloomsbury Doctoral Training Programme</strong> – Won support to run one-day
-conference “Interdisciplinary approaches to Developmental Disorders” (£1800).
-Awarded to Rachael Davis and Michael Thomas.</p>
-<p>2015: <strong>Birkbeck, University of London</strong> Travel grant for conference: £500.</p>
-<h3>Conference presentations and invited talks</h3>
-<p>2020: Autism and Bilingualism, and cognitive development: Invited Speaker,
-Mathematics MSc Seminar series, <em>University of Edinburgh</em>.</p>
-<p>2020: Measuring social cognition in children with learning difficulties -
-Invited speaker at Psycholinguistics Workshop, <em>Middle East Technical University</em>,
-Turkey. *</p>
-<p>2020: Understanding social cognition in autistic children, <em>International Society</em>
-<em>for Autism Research</em>. Selected for poster presentation *</p>
-<p>2020: <em>Meeting in Language and Autism (MOLA)</em> Selected for oral presentation *</p>
-<p>2019: Literature Reviews and Methods, 101: Invited speaker, Nuts and Bolts of
-research, <em>University of Edinburgh</em>.</p>
-<p>2019: Autism and Bilingualism: Poster presentation at <em>Salvesen Mindroom Research
-Centre</em> Inaugural lecture.</p>
-<p>2019: Charting the impact of bilingualism on social development for children
-with and without autism. Oral presentation, <em>Flux conference</em>, New York.</p>
-<p>2019: Charting the impact of bilingualism on social development for children
-with and without autism. Poster Presentation, <em>Autism Europe</em>, Nice.</p>
-<p>2019: Autism and Bilingualism workshop, in association with <em>McGill University</em>,
-Montreal, Canada. Invited expert panel member for stakeholder workshop.</p>
-<p>2019: Charting the Impact of Bilingualism on Social and Communicative
-Development in Autistic Children. Poster Presentation, <em>International Society for</em>
-<em>Autism Research</em>, Toronto, Canada.</p>
-<p>2019: Bilingualism Matters annual conference, Edinburgh – Invited speaker 2019:
-Autism and Bilingualism. Invited speaker, <em>Institute of Education</em>. London.</p>
-<p>2018: Cerebral Lateralization and the Left Cradling Bias in ASD. Poster
-presentation, <em>International Society for Autism Research</em>, Rotterdam, Netherlands.</p>
-<p>2018: Cerebral Lateralisation and the Left Cradling Bias in ASD, Poster
-presentation, <em>British Psychological Society</em> annual conference.</p>
-<p>2017: Neuroimaging and Computational Modelling in Psychology. Invited speaker,
-<em>Birkbeck, University of London</em>.</p>
-<p>2017: Cerebral Lateralization and the Left Cradling Bias in ASD. Invited
-speaker, <em>Developmental cognition lab, Birkbeck, University of London</em>.</p>
-<p>2017: Phenotypic Variability in Infants with Familial Risk of ASD. Poster
-presentation at the <em>Lancaster Child Development Conference</em>.</p>
-<p>2017: Cerebral Lateralization and the Left Cradling Bias in ASD. Poster
-presentation at the <em>British Psychological Society Annual Conference</em>.</p>
-<p>2017: Phenotypic Variability in Infants with Familial Risk of ASD. Oral
-presentation at the <em>Cold Spring Harbor Autism Spectrum Disorders Workshop</em>.</p>
-<p>2016: Predicting Clinical Outcomes of Autism from At-Risk Infants. Poster
-competition at the <em>Bloomsbury Colleges Symposium</em> – won first prize overall.</p>
-<p>2016: The Over-Pruning Hypothesis of Autism. <em>Oral presentation Computational</em>
-<em>Psychiatry Course, University College London</em>.</p>
-<p>2015: Neural Noise workshop. Invited Panellist and speaker, <em>University of</em>
-<em>London</em>.</p>
-<p>2015: Understanding intervention in ASD using computational models.
-Presentation, <em>British Psychological Society Annual Conference</em>.</p>
-<p>2015: Research within neurodevelopmental disorders; past, present and future.
-Speaker, <em>DNL lab, Birkbeck, University of London</em>.</p>
-<p>2014: Modelling Developmental Trajectories in Autism. Poster competition,
-<em>Bloomsbury Colleges Symposium, Institute of Education</em>.</p>
-<p>2013: Modelling Developmental Trajectories in Autism: Combining Clinical and
-Computational Approaches. Speaker, <em>DNL lab, Birkbeck, University of London</em>.</p>
-<p>2013: Attention &amp; Learning Workshop – oral presentation, <em>Birkbeck, University of</em>
-<em>London</em>.</p>
+<p>2022-2023: Understanding the impact of bilingualism for autistic children. <strong>Fondation International de la Recherche Appliqué sur le Handicap (FIRAH)</strong>. Awarded to: Rachael Davis, Sue Fletcher-Watson &amp; Antonella Sorace. Role: PI.</p>
+<p>2022: Imagination Agents. <strong>Catalyst Arts &amp; QMU research fund</strong>. Awarded to: Helen Burns, Rachael Davis, Suzie Dick. Role: Co-I.</p>
+<p>2021: <strong>University of Edinburgh Public Engagement Fund</strong> Awarded to: Rachael Davis, Bérengère Digard. Role: Co-PI.</p>
+<p>2018: Motor biases and cerebral lateralisation <strong>Waterloo Foundation, Child</strong> <strong>Development Scheme</strong>. Awarded to: Gillian Forrester, Rachael Davis, Brenda Todd. Role: Co-I.</p>
+<p>2017: <strong>Nancy Lurie Marks Family Foundation</strong> Cold Spring Harbor Laboratories Summer School Travel Award.</p>
+<p>2017: Creating computational models of interventions to understand variability in autism. <strong>Birkbeck Wellcome Trust Institutional Strategic Support Fund</strong>. Awarded to: Rachael Davis and Michael Thomas. Role: PI</p>
+<p>2017: <strong>Bloomsbury Doctoral Training Programme</strong> – Won support to run one-day conference “Interdisciplinary approaches to Developmental Disorders”. Awarded to Rachael Davis and Michael Thomas.</p>
+<p>2015: <strong>Birkbeck, University of London</strong> Travel grant for conference.</p>
+<h3>Selected conference presentations and invited talks (since 2019)</h3>
+<p><strong>2020:</strong> Autism and Bilingualism, and cognitive development: Invited Speaker, Mathematics MSc Seminar series, <em>University of Edinburgh</em>.<br>
+<strong>2020:</strong> Measuring social cognition in children with learning difficulties -
+Invited speaker at Psycholinguistics Workshop, <em>Middle East Technical University</em>,Turkey. *<br>
+<strong>2020:</strong> Understanding social cognition in autistic children, <em>International Society</em> <em>for Autism Research</em>. Selected for poster presentation *<br>
+<strong>2020</strong>: <em>Meeting in Language and Autism (MOLA)</em> Selected for oral presentation *<br>
+<strong>2019</strong>: Literature Reviews and Methods, 101: Invited speaker, Nuts and Bolts of research, <em>University of Edinburgh</em>.<br>
+<strong>2019</strong>: Autism and Bilingualism: Poster presentation at <em>Salvesen Mindroom Research Centre</em> Inaugural lecture.<br>
+<strong>2019:</strong> Charting the impact of bilingualism on social development for children with and without autism. Oral presentation, <em>Flux conference</em>, New York.<br>
+<strong>2019:</strong> Charting the impact of bilingualism on social development for children with and without autism. Poster Presentation, <em>Autism Europe</em>, Nice.<br>
+<strong>2019:</strong> Autism and Bilingualism workshop, in association with <em>McGill University</em>, Montreal, Canada. Invited expert panel member for stakeholder workshop.<br>
+<strong>2019:</strong> Charting the Impact of Bilingualism on Social and Communicative
+Development in Autistic Children. Poster Presentation, <em>International Society for</em> <em>Autism Research</em>, Toronto, Canada.<br>
+<strong>2019:</strong> Bilingualism Matters annual conference, Edinburgh – Invited speaker <strong>2019</strong>: Autism and Bilingualism. Invited speaker, <em>Institute of Education</em>. London.</p>
 <p>* <em>Delayed due to Covid-19, but will be presenting at a later date.</em></p>
-<h3>Public Engagement</h3>
-<p>2020: Autism and Bilingualism. Selected for <em>Pint of Science, Edinburgh</em> (delayed
-until November).</p>
-<p>2020: Selected to contribute as part of an expert panel on the
+<h3>Selected Public Engagement Activities</h3>
+<p><strong>2020:</strong> Autism and Bilingualism. Selected for <em>Pint of Science, Edinburgh</em> (delayed until November).<br>
+<strong>2020:</strong> Selected to contribute as part of an expert panel on the
 production of a bilingual measure for researchers (in addition, will be
-co-author on journal article).</p>
-<p>2019: Statistics for non-researchers: <em>Invited one-day course leader (also</em>
-<em>designed the course)</em></p>
-<p>2019: Autism and Development. <em>Invited Speaker, Phoenix School network</em>, London.</p>
-<p>2019: Autism and Development, <em>Invited speaker, Signet Training Programme</em>, London.</p>
-<p>2019: Autism and Bilingualism. <em>Invited Speaker, Bigland Green Primary School</em>, London.</p>
-<p>2019: Organised Research party for participants of Autism and Bilingualism Study.</p>
-<p>2018: AMASE Research Podcast, <em>Invited guest speaker</em>.</p>
-<p>2018: Autism and Bilingualism: <em>Invited blogpost for Bilingualism Matters</em>.</p>
+co-author on journal article).<br>
+<strong>2019:</strong> Statistics for non-researchers: <em>Invited one-day course leader (also</em> designed the course)<br>
+<strong>2019:</strong> Autism and Development. <em>Invited Speaker, Phoenix School network</em>, London.<br>
+<strong>2019:</strong> Autism and Development, <em>Invited speaker, Signet Training Programme</em>, London.<br>
+<strong>2019</strong>: Autism and Bilingualism. <em>Invited Speaker, Bigland Green Primary School</em>, London.<br>
+<strong>2019</strong>: Organised Research party for participants of Autism and Bilingualism Study.<br>
+<strong>2018</strong>: AMASE Research Podcast, <em>Invited guest speaker</em>.<br>
+<strong>2018:</strong> Autism and Bilingualism: <em>Invited blogpost for Bilingualism Matters</em>.</p>
 <hr>
 <h2>TEACHING</h2>
 <h3>Teaching expertise</h3>
-<p>I have taught on a range of undergraduate and postgraduate courses at the
-University of Edinburgh, Birkbeck, University of London and University College
-London, as an associate lecturer and guest lecturer. I wrote or adapted all
-lectures and courses that I have led.</p>
+<p>In addition to my current lectureship at QMU, I have taught on a range of undergraduate and postgraduate courses at the University of Edinburgh, Birkbeck, University of London and University College London, as an associate lecturer and guest lecturer. I wrote or adapted all lectures and courses that I have led. This includes:</p>
 <ul>
-<li>
-<p>Lecturer, MSc Neuroscience elective course, <em>Psychological Theories of ASD</em>,
-The University of Edinburgh (2018, 2019, 2020)</p>
-</li>
-<li>
-<p>Seminar leader, <em>Introduction to Research methods</em>, BSc Psychology, Birkbeck,
-University of London (2017)</p>
-</li>
-<li>
-<p>Associate Lecturer, <em>Developmental Cognitive Neuroscience of Typical and
-Atypical Development</em>, Birkbeck, University of London (2018)</p>
-</li>
-<li>
-<p>Associate Lecturer, <em>Developmental Cognitive Neuroscience MSc</em>, Birkbeck,
-University of London (2018, 2019)</p>
-</li>
-<li>
-<p>Guest lecturer, <em>Fundamental Debates in Cognitive Science MSc course</em>,
-Birkbeck, University of London (2017, 2018)</p>
-</li>
-<li>
-<p>From January 2021, I will be leading a 10-week undergraduate Child Development
-course that I was invited to develop at the University of Glasgow (evening
-course).</p>
-</li>
+<li>Lecturer, MSc Neuroscience elective course, <em>Psychological Theories of ASD</em> The University of Edinburgh (2018, 2019, 2020)</li>
+<li>Seminar leader, <em>Introduction to Research methods</em>, BSc Psychology, Birkbeck, University of London (2017)</li>
+<li>Associate Lecturer, <em>Developmental Cognitive Neuroscience of Typical and Atypical Development</em>, <em>MSc Cognitive Neuroscience.</em> Birkbeck, University of London (2018)</li>
+<li>Associate Lecturer, MSc <em>Developmental Cognitive Neuroscience MSc</em>, Birkbeck, University of London (2018, 2019)</li>
+<li>Guest lecturer, <em>Fundamental Debates in Cognitive Science MSc course</em>, Birkbeck, University of London (2017, 2018)</li>
+<li>I developed and led a 10-week undergraduate Child Development course for the University of Glasgow</li>
 </ul>
 <h3>Supervision</h3>
-<p>I have supervised several BSc and MSc students to completion at The University
-of Edinburgh and Birkbeck, University of London.</p>
-<h3>Students</h3>
-<p><strong>Kekwick, G</strong>: Biomedical Sciences 4th year Project, The university of Edinburgh.
-Systematic Review: The effects of bilingualism on cognitive development (2020).</p>
-<p><strong>Mayer, M</strong>: MSc Human Cognitive Neuroscience, The University of Edinburgh.
-Investigating the impact of bilingualism on social communicative skills in
-autistic children (2019).</p>
-<p><strong>Powell, C</strong>: MSc Education - Child and Adolescent Psychology, The University of
-Edinburgh. Teacher Identification of Autism Spectrum Disorder by Gender, needs
-And symptomology: a vignette-based study (2019).</p>
-<p><strong>Leng, M</strong>: MSc Education - Child and Adolescent Psychology, The University of
-Edinburgh. Parental mediation of pre-schooler’s digital technology use in China
-and the UK: A cross-cultural Comparison Study (2019).</p>
-<p><strong>Mohammed, F, B</strong>: Biomedical Sciences 4th year project, The University of
-Edinburgh. Exploring practitioners understanding of the impact of bilingualism
-of autistic children. (2018)</p>
+<p>I have supervised 10 BSc and MSc students to completion at QMU, The University of Edinburgh and Birkbeck, University of London and QMU, all within autism, developmental psychology or education research.</p>
+<h3>Selected students project titles:</h3>
+<ul>
+<li>Understanding the views of parents of neurodivergent, bilingual children (2021/2022)</li>
+<li>Understanding the experiences of autistic and gender diverse adults (2021/2022)</li>
+<li>Understanding the school experiences of autistic children (2021/2022)</li>
+<li>Systematic Review: the effects of bilingualism on cognitive development (2020/2021).</li>
+<li>Investigating the impact of bilingualism on social communicative skills in autistic children (2020/2021)</li>
+<li>Teacher Identification of autism by gender, needs and symptomology: a vignette-based study (2019/2020).</li>
+<li>Parental mediation of pre-schooler’s digital technology use in China and the UK: A cross-cultural comparison study (2019/2020).</li>
+<li>Exploring practitioners understanding of the impact of bilingualism of autistic children. (2018/2019)</li>
+</ul>
 <hr>
 <h2>LEADERSHIP AND MARKERS OF ESTEEM</h2>
 <h3>Academic service</h3>
-<p>2019-Present : Organiser of the <em>Rising Star Seminar Series</em>, a quarterly seminar
-series for early career researchers based within Europe and working in the
-fields of Education and Developmental Psychology to discuss their work and
-careers to date.</p>
-<p>2017: Secured funding to organise a one-day UK-based conference:
-<em>Interdisciplinary approaches to understanding Autism Spectrum Disorders</em>.
-University of London. This included eight academic speakers who are
-world-leaders in their fields, and over 100 attendees.</p>
+<p><strong>2022-Present:</strong> Organiser of the Memory &amp; Research Seminar Series, QMU.<br>
+<strong>2021-Present:</strong> Co-organiser of the QMU early career researcher network.<br>
+<strong>2021-Present:</strong> Committe member, School Research &amp; Innovation Enhancement Group, QMU.<br>
+<strong>2021-Present:</strong> Member of the Ethics committee, QMU<br>
+<strong>2019-2021</strong> Organiser of the <em>Rising Star Seminar Series</em>, a quarterly seminar series for early career researchers based within Europe and working in the fields of Education and Developmental Psychology to discuss their work and careers to date.<br>
+<strong>2017:</strong> Secured funding to organise a one-day UK-based conference: <em>Interdisciplinary approaches to understanding Autism Spectrum Disorders</em>. University of London. This included eight academic speakers who are world-leaders in their fields, and over 100 attendees.</p>
 <h3>Markers of esteem</h3>
-<p>2020: Selected for Ingenious Women, 2020 – a competitive networking initiative
-and leadership training course, for Early Career Researchers in Scotland.</p>
-<p>2020: Invited founding member of the SOFAR network - A UK-wide interdisciplinary
-network of women in STEMM</p>
-<p>2019 - present: Scientific advisor and committee member: Scottish Government’s
-Understanding Autism programme.
-I was selected as the only researcher in Scotland for an advisory role in this
-governmental committee. I have two main roles: The first is to co-produce a
-national media campaign to increase understanding of autism in the general
-population across Scotland. The second is assessing grant applications and
-allocating funding to Scottish charities who aim to increase opportunities for
-inclusion for autistic people living in Scotland.</p>
+<p><strong>2020:</strong> Selected for Ingenious Women, 2020 – a competitive networking initiative and leadership training course, for Early Career Researchers in Scotland.</p>
+<p><strong>2020:</strong> Invited founding member of the SOFAR network - A UK-wide interdisciplinary network of women in STEMM</p>
+<p><strong>2019</strong> - Present: scientific advisor and committee member: Scottish Government’s Understanding Autism programme. I was selected as the only researcher in Scotland for an advisory role in thisgovernmental committee. I have two main roles: The first is to co-produce a national media campaign to increase understanding of autism in the general population across Scotland. The second is assessing grant applications and allocating funding to Scottish charities who aim to increase opportunities for inclusion for autistic people living in Scotland.</p>
 <hr>
 <h2>SERVICE TO THE WIDER COMMUNITY</h2>
 <h3>Reviewing work</h3>
-<p>I regularly review manuscripts for the following journals: <em>Frontiers in</em>
-<em>Psychology, Autism, Developmental Science, Journal of Autism and Developmental</em>
-<em>Disorders, Autism &amp; Developmental Language Impairments, Research In Autism</em>
-<em>Spectrum Disorders, Perspectives in Psychological Science, Scientific Reports.</em></p>
+<p>I regularly review manuscripts for the following journals: <em>Autism, Autism &amp; Developmental Language Impairments, Autism Research, Developmental Science, Frontiers in</em> <em>Psychology, Journal of Autism and Developmental</em> <em>Disorders, Research In Autism</em> <em>Spectrum Disorders &amp; Perspectives in Psychological Science.</em></p>
 <h3>Membership of external organisations</h3>
-<p>I am a member of the International Society for Autism Research (INSAR).</p>
+<p>I am a member of the International Society for Autism Research (INSAR).<br>
+I am a Chartered member of the BPS (Developmental section)</p>
 <hr>
 <h2>CLINICAL TRAINING</h2>
 <ul>
-<li>Mental Health First Aid training (2019)</li>
 <li>I am trained in the delivery of the Autism Diagnostic Observational Schedules (ADOS), a diagnostic tool for autism (2018)</li>
 <li>I am trained in delivery of the Bayley scales of Infant Development (2017)</li>
 </ul>
 
 
-    </main>
+<script>
+    let headingContainer = document.getElementById("headings")
+    let headings = document.getElementsByTagName("h2");
 
-    <footer class="Mt(2em) Bdts(s) Bdtw(t)">
-        <div class="Pos(r) Px(1.5em) My(2em)">
-            <p class="P(0) M(0) Bdbs(da) Bdbw(t) D(ib)"><em>Contact</em></p>
-            <p class="P(0) M(0)">© Rachael Davis</p>
-            <p class="P(0) M(0)">rdavis [at] qmu [dot] ac [dot] uk</p>
-            <div class="Pos(r) T(5px)">
-                <a href="mailto: rdavis@qmu.ac.uk"><svg height="1em" width="1em" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g data-name="36-mail" id="_36-mail"><rect class="cls-1" height="22" width="30" x="1" y="5"/><polyline class="cls-1" points="1 5 16 20 31 5"/><line class="cls-1" x1="1" x2="12" y1="27" y2="16"/><line class="cls-1" x1="31" x2="20" y1="27" y2="16"/></g></svg></a>
-                        <a href="https://www.twitter.com/rachaelvdavis"><svg height="1em" width="1em" viewBox="0 0 512 512"><path
-                                                                                       d="M492,109.5c-17.4,7.7-36,12.9-55.6,15.3c20-12,35.4-31,42.6-53.6c-18.7,11.1-39.4,19.2-61.5,23.5
-                                                                                       C399.8,75.8,374.6,64,346.8,64c-53.5,0-96.8,43.4-96.8,96.9c0,7.6,0.8,15,2.5,22.1C172,179,100.6,140.4,52.9,81.7
-                                                                                       c-8.3,14.3-13.1,31-13.1,48.7c0,33.6,17.1,63.3,43.1,80.7C67,210.7,52,206.3,39,199c0,0.4,0,0.8,0,1.2c0,47,33.4,86.1,77.7,95
-                                                                                       c-8.1,2.2-16.7,3.4-25.5,3.4c-6.2,0-12.3-0.6-18.2-1.8c12.3,38.5,48.1,66.5,90.5,67.3c-33.1,26-74.9,41.5-120.3,41.5
-                                                                                       c-7.8,0-15.5-0.5-23.1-1.4C62.9,432,113.8,448,168.4,448C346.6,448,444,300.3,444,172.2c0-4.2-0.1-8.4-0.3-12.5
-                                                                                       C462.6,146,479,128.9,492,109.5z"/></svg></a>
-            </div>
-            <p>Website by <a href="mailto: jamesstanleyswatton@gmail.com">James Swatton</a></p>
-            <h1 class="M(0) P(0) Pos(a) End(1em) B(-8px)">☮︎</h1>
-        </div>
-    </footer>
+    Array.from(headings).forEach(heading => {
+        heading.id = heading.innerText;
+        heading.style = "scroll-margin: 120px"
+        let item = document.createElement("li");
+        let link = document.createElement("a");
+
+        link.innerText = heading.id;
+        link.href = `#${heading.id}`;
+
+        item.appendChild(link);
+        headingContainer.appendChild(item);
+    })
+    console.log(headingContainer)
+</script>
+
+            
+                <button id="back-to-top">⬆︎</button>
+            </main>
+        
+            <footer class="Fxb(a) Mt(2em) Bdts(s) Bdtw(t)">
+                <div class="Pos(r) Px(1.5em) My(2em)">
+                    <p class="P(0) M(0) Bdbs(da) Bdbw(t) D(ib)"><em>Contact</em></p>
+                    <p class="P(0) M(0)">© Rachael Davis</p>
+                    <p class="P(0) M(0)">rdavis [at] qmu [dot] ac [dot] uk</p>
+                    <div class="Pos(r) T(5px)">
+                        <a href="mailto: rdavis@qmu.ac.uk"><svg height="1em" width="1em" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g data-name="36-mail" id="_36-mail"><rect class="cls-1" height="22" width="30" x="1" y="5"/><polyline class="cls-1" points="1 5 16 20 31 5"/><line class="cls-1" x1="1" x2="12" y1="27" y2="16"/><line class="cls-1" x1="31" x2="20" y1="27" y2="16"/></g></svg></a>
+                                <a href="https://www.twitter.com/rachaelvdavis"><svg height="1em" width="1em" viewBox="0 0 512 512"><path
+                                                                                               d="M492,109.5c-17.4,7.7-36,12.9-55.6,15.3c20-12,35.4-31,42.6-53.6c-18.7,11.1-39.4,19.2-61.5,23.5
+                                                                                               C399.8,75.8,374.6,64,346.8,64c-53.5,0-96.8,43.4-96.8,96.9c0,7.6,0.8,15,2.5,22.1C172,179,100.6,140.4,52.9,81.7
+                                                                                               c-8.3,14.3-13.1,31-13.1,48.7c0,33.6,17.1,63.3,43.1,80.7C67,210.7,52,206.3,39,199c0,0.4,0,0.8,0,1.2c0,47,33.4,86.1,77.7,95
+                                                                                               c-8.1,2.2-16.7,3.4-25.5,3.4c-6.2,0-12.3-0.6-18.2-1.8c12.3,38.5,48.1,66.5,90.5,67.3c-33.1,26-74.9,41.5-120.3,41.5
+                                                                                               c-7.8,0-15.5-0.5-23.1-1.4C62.9,432,113.8,448,168.4,448C346.6,448,444,300.3,444,172.2c0-4.2-0.1-8.4-0.3-12.5
+                                                                                               C462.6,146,479,128.9,492,109.5z"/></svg></a>
+                    </div>
+                    <p>Website by <a href="mailto: jamesstanleyswatton@gmail.com">James Swatton</a></p>
+                    <h1 class="M(0) P(0) Pos(a) End(1em) B(-8px)">☮︎</h1>
+                </div>
+            </footer>
+
 </body>
 </html>

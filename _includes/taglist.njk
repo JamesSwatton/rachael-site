@@ -1,7 +1,12 @@
 <div class="tag-list">
     <p class="D(i)">All tags: </p>
     {% for tag in collections.tagList %}
-        {% set tagUrl = ["/tags/", tag, "/"] | join %}
-        <a href="{{ tagUrl | url }}">{{ tag }}</a> |
+        {% if tag !== collections.tagList | reverse | first %}
+            {% set tagUrl = ["/tags/", tag, "/"] | join %}
+            <a href="{{ tagUrl | url }}">{{ tag }}</a> |
+        {% else %}
+            {% set tagUrl = ["/tags/", tag, "/"] | join %}
+            <a href="{{ tagUrl | url }}">{{ tag }}</a>
+        {% endif %}
     {% endfor %}
 </div>

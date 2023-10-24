@@ -1,8 +1,15 @@
 {
-    "title": "Rachael Davis",
-    "url": "www.rachaeldavis.co.uk",
-    "twitter": "https://www.twitter.com/rachaelvdavis",
-    "email": "rdavis@qmu.ac.uk",
-    "miniBio": "Developmental psychologist focusing on autism, cognition & education",
-    "postListLength": 3
+  "title": "Dr Rachael Davis",
+  "url": "www.rachael-davis.com",
+  "twitter": "https://www.twitter.com/rachaelvdavis",
+  "email": "rdavis@qmu.ac.uk",
+  "miniBio": "Developmental psychologist focusing on autism, cognition & education",
+  "postListLength": 3,
+  "navOrder": [
+    "about",
+    "research",
+    "publications",
+    "blog",
+    "links"
+  ]
 }

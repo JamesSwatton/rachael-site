@@ -1,0 +1,36 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: _layouts/post.njk
+- type: datetime
+  name: date
+  label: Date
+  config:
+    date_format: DD/MM/YYYY
+    required: true
+  default: '2022-04-05T08:17:26Z'
+- type: list
+  name: tags
+  label: Tags
+  config:
+    use_select: false
+    max: 4
+- type: text
+  name: permalink
+  label: permalink
+  hidden: true
+  default: "/blog/posts/{{ title | slug }}/"
+pages:
+- posts/a-great-talk-from-crae.md
+- posts/book-chapter-out-now.md
+- posts/new-project-imagination-agents.md

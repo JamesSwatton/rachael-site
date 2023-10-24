@@ -1,0 +1,29 @@
+---
+label: Research project
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  default: _/layouts/base.njk
+  hidden: true
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: list
+  name: tagss
+  label: Tags
+  config:
+    use_select: false
+    max: 4
+- type: file
+  name: imagePath
+  label: Image
+  description: 'CAUTION: Make sure you add an image'
+- type: text
+  name: permalink
+  label: permalink
+  hidden: true
+  default: "/research/{{ title | slug }}/"

@@ -1,10 +1,31 @@
 ---
 layout: _layouts/base.njk
 ---
-<div class="Bdbs(da) Bdbw(t) Pb(2rem) Bdbc(gray)">
+<div class="Bdbs(da) Bdbw(t) Pb(1rem) Bdbc(gray)">
     <a class="Bg(n):hover"href="{{ '/assets/CV.pdf' | url }}" download="cv.pdf">
         <button>Download</button>
     </a>
 </div>
 
+    <ul id="headings" class="Bdbs(da) Bdbw(t) Pb(1em) Bdbc(gray)">
+    </ul>
 {{ content | safe }}
+
+<script>
+    let headingContainer = document.getElementById("headings")
+    let headings = document.getElementsByTagName("h2");
+
+    Array.from(headings).forEach(heading => {
+        heading.id = heading.innerText;
+        heading.style = "scroll-margin: 120px"
+        let item = document.createElement("li");
+        let link = document.createElement("a");
+
+        link.innerText = heading.id;
+        link.href = `#${heading.id}`;
+
+        item.appendChild(link);
+        headingContainer.appendChild(item);
+    })
+    console.log(headingContainer)
+</script>

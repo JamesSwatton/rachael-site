@@ -1,4 +1,5 @@
-const { DateTime } = require("luxon")
+const { DateTime } = require("luxon");
+let metadata = require("./_data/metadata.json");
 
 module.exports = function(eleventyConfig) {
     //add css to watch list
@@ -8,10 +9,23 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
     // copy css to _site
     eleventyConfig.addPassthroughCopy("css");
+    // copy CNAME to _site
+    eleventyConfig.addPassthroughCopy("CNAME");
 
     eleventyConfig.setDataDeepMerge(true);
 
     // CUSTOM FILTERS
+    eleventyConfig.addFilter("sortBy", function(collection, data) {
+        collection.forEach(item => {
+            if (!item[data]) return;
+            if (item[data] && typeof item[data] !== "string" ||
+                item[data] && typeof item[data] !== "number") {
+                return;
+            }
+        })
+        return collection.sort((a,b) => a.data.year - b.data.year);
+    })
+    
     eleventyConfig.addFilter("stripUrl", function(url, n = 1) {
         return url.split("/")[n];
     })
@@ -66,7 +80,7 @@ module.exports = function(eleventyConfig) {
             if (element.data.year) yearSet.add(element.data.year)
         })
 
-        return yearSet;
+        return Array.from(yearSet).sort();
     })
 
     eleventyConfig.addCollection("tagList", function(collection) {
@@ -80,7 +94,8 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addCollection("navList", function(collection) {
         return collection.getAll()
-            .filter(item => item.data.nav)
-            .sort((a, b) => a.data.nav.order - b.data.nav.order);
+            .filter(item => item.data.title)
+            .filter(item => metadata.navOrder.includes(item.data.title.toLowerCase()))
+            .sort((a, b) => metadata.navOrder.indexOf(a.data.title.toLowerCase()) - metadata.navOrder.indexOf(b.data.title.toLowerCase()));
     })
 }

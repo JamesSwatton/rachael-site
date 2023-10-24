@@ -4,7 +4,8 @@ module.exports = {
 		danley: "OPTIDanley-Bold",
 		mainColour: "#fffcfa", // almost red
 		// mainColour: "#f5f5fc", // almost blue
-		shsm: "0px 10px 20px"
+		shsm: "0px 10px 20px",
+		goose404: "url(/assets/goose.jpg)"
 	},
 	breakPoints: {
     'sm': '@media(min-width:600px)', // breakpoint 1

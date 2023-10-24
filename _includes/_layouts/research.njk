@@ -1,25 +1,39 @@
 ---
 layout: _layouts/base.njk
 ---
+<div>
+    {% if content %}
+        {{ content | safe }}
+
+        <hr>
+    {% endif %}
+
 {% for project in collections.research %}
-    <div class="D(f)--md My(1em) Z(-1) H(300px)--md">
-        <div class="Pos(r) Mend(1em)--md Miw(2/5)--md H(300px) Bgp(c)
-        Bgz(cv) Bgz(a)--md" style="background-image: url({{
+    <div class="My(1em) Z(-1) ">
+        <div class="Pos(r)  H(300px) Bgp(c)
+        Bgz(cv)" style="background-image: url({{
             project.data.imagePath | url }})">
-            <h1 class="Mt(0) P(0.5em) Pos(a) T(0) Maw(3/5)--sm C(mainColour)">{{ project.data.title }}</h1>
+            <h1 class="Fz(3em)--md Mt(0) P(0.5em) Pos(a) T(0) Maw(3/5)--sm C(mainColour)">{{ project.data.title }}</h1>
         </div>
         <div>
             <div class="D(f) Fxd(c) Miw(3/5)">
                 <div class="As(fe)">
                     {% for tag in project.data.tagss %}
                         {% set tagUrl = ["/tags/", tag, "/"] | join %}
-                        <a href="{{ tagUrl | url }}">{{ tag }}</a> |
+                        <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                        {% if tag !== project.data.tagss | reverse | first %}
+                             | 
+                        {% endif %}
                     {% endfor %}
                 </div>
-                <div class="H(276px)--md Ov(s)--md Ovx(h)--md BdB">
+                <div >
                     {{ project.data.content | safe }}
                 </div>
             </div>
         </div>
     </div>
+    {% if project != collections.research | reverse | first %}
+        <hr>
+    {% endif %}
 {% endfor %}
+</div>

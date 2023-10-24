@@ -1,0 +1,16 @@
+---
+label: About me
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  hidden: true
+  default: About
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: _layouts/about.njk
+pages:
+- about.md

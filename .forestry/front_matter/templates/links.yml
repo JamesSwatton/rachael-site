@@ -1,0 +1,41 @@
+---
+label: Links
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  default: Links
+  hidden: true
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: _layouts/links.njk
+- type: text
+  name: permalink
+  label: permalink
+  default: "/links/"
+  hidden: true
+- type: field_group_list
+  name: links
+  label: Links
+  fields:
+  - type: text
+    name: title
+    label: Title
+    config:
+      required: true
+  - type: text
+    name: url
+    label: url
+    config:
+      required: true
+  - type: text
+    name: description
+    label: Description
+    description: A brief description of what the link is about
+    config:
+      required: true
+pages:
+- links.md

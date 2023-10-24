@@ -28,6 +28,9 @@
 .Bg\(n\)\:hover:hover {
   background: none;
 }
+.Bgi\(goose404\) {
+  background-image: url(/assets/goose.jpg);
+}
 .Bgc\(mainColour\) {
   background-color: #fffcfa;
 }
@@ -57,6 +60,9 @@
 }
 .C\(red\) {
   color: red;
+}
+.C\(white\) {
+  color: white;
 }
 .C\(black\)\:link:link {
   color: black;
@@ -97,6 +103,9 @@
 .C\(lightslategray\)\:h:hover {
   color: lightslategray;
 }
+.Cur\(p\) {
+  cursor: pointer;
+}
 .D\(b\) {
   display: block;
 }
@@ -114,6 +123,12 @@
 }
 .drop:hover .drop\:h_D\(b\) {
   display: block;
+}
+.Fxg\(1\) {
+  flex-grow: 1;
+}
+.Fxb\(a\) {
+  flex-basis: auto;
 }
 .As\(fe\) {
   align-self: flex-end;
@@ -133,6 +148,9 @@
 .Fl\(start\) {
   float: left;
 }
+.Fz\(1\.5em\) {
+  font-size: 1.5em;
+}
 .Fz\(4em\) {
   font-size: 4em;
 }
@@ -142,11 +160,18 @@
 .H\(300px\) {
   height: 300px;
 }
+.H\(600px\) {
+  height: 600px;
+}
 .M\(0\) {
   margin: 0;
 }
 .M\(a\) {
   margin: auto;
+}
+.Mx\(a\) {
+  margin-left: auto;
+  margin-right: auto;
 }
 .My\(0\.5em\) {
   margin-top: 0.5em;
@@ -172,14 +197,20 @@
 .Mt\(2\.5rem\) {
   margin-top: 2.5rem;
 }
+.Mt\(60px\) {
+  margin-top: 60px;
+}
 .Mend\(2em\) {
   margin-right: 2em;
+}
+.Mb\(0\) {
+  margin-bottom: 0;
 }
 .Mb\(1\.5em\) {
   margin-bottom: 1.5em;
 }
-.Mb\(40px\) {
-  margin-bottom: 40px;
+.Mb\(3em\) {
+  margin-bottom: 3em;
 }
 .Mstart\(1em\) {
   margin-left: 1em;
@@ -189,6 +220,9 @@
 }
 .Maw\(150px\) {
   max-width: 150px;
+}
+.Maw\(800px\) {
+  max-width: 800px;
 }
 .Maw\(850px\) {
   max-width: 850px;
@@ -201,6 +235,9 @@
 }
 .Miw\(3\/5\) {
   min-width: 60%;
+}
+.Miw\(fc\) {
+  min-width: fit-content;
 }
 .T\(0\) {
   top: 0;
@@ -237,8 +274,11 @@
 .Pb\(0\.5em\) {
   padding-bottom: 0.5em;
 }
-.Pb\(2rem\) {
-  padding-bottom: 2rem;
+.Pb\(1em\) {
+  padding-bottom: 1em;
+}
+.Pb\(1rem\) {
+  padding-bottom: 1rem;
 }
 .Pos\(a\) {
   position: absolute;
@@ -249,8 +289,17 @@
 .Pos\(st\) {
   position: sticky;
 }
+.Ta\(c\) {
+  text-align: center;
+}
+.Ta\(end\) {
+  text-align: right;
+}
 .W\(3em\) {
   width: 3em;
+}
+.W\(600px\) {
+  width: 600px;
 }
 .Z\(-1\) {
   z-index: -1;
@@ -275,6 +324,9 @@
   .D\(n\)--sm {
     display: none;
   }
+  .Fz\(2em\)--sm {
+    font-size: 2em;
+  }
   .Fz\(3em\)--sm {
     font-size: 3em;
   }
@@ -294,9 +346,6 @@
   }
 }
 @media(min-width:900px) {
-  .Bgz\(a\)--md {
-    background-size: auto;
-  }
   .D\(b\)--md {
     display: block;
   }
@@ -309,25 +358,10 @@
   .Fl\(n\)--md {
     float: none;
   }
-  .H\(276px\)--md {
-    height: 276px;
-  }
-  .H\(300px\)--md {
-    height: 300px;
-  }
-  .Mend\(1em\)--md {
-    margin-right: 1em;
+  .Fz\(3em\)--md {
+    font-size: 3em;
   }
   .Maw\(250px\)--md {
     max-width: 250px;
-  }
-  .Miw\(2\/5\)--md {
-    min-width: 40%;
-  }
-  .Ov\(s\)--md {
-    overflow: scroll;
-  }
-  .Ovx\(h\)--md {
-    overflow-x: hidden;
   }
 }

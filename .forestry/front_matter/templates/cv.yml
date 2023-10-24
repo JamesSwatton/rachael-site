@@ -1,0 +1,21 @@
+---
+label: CV
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  hidden: true
+  default: CV
+- type: text
+  name: permalink
+  label: permalink
+  hidden: true
+  default: "/about/cv/"
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: _layouts/cv.njk
+pages:
+- cv.md
