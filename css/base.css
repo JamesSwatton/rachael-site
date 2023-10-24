@@ -1,0 +1,86 @@
+@font-face {
+	font-family: OPTIDanley-Bold;
+	src: url(/assets/OPTIDanley-Bold.otf)
+}
+
+/* * { */
+/* 	padding: 0; */
+/* 	margin: 0; */
+/*  } */
+
+html, body {
+	height: 100%;
+}
+
+html {
+	/* font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */ 
+	font-family: Jost, Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 400;
+	font-size: 17px;
+}
+
+h1, h2, h3 {
+	font-family: OPTIDanley-Bold;
+}
+
+hr {
+	height: 1px;
+	border-width: 0;
+	color: black;
+	background-color: black;
+}
+
+a:link, a:visited {
+	color: #f01c00;
+	text-decoration: none; 
+}
+
+a:hover {
+	/* color: silver; */
+	text-decoration: underline;
+	color: black;
+	background: yellow;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	padding-left: 1.5em;
+}
+
+.twitter-tweet {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: auto;
+}
+
+#logo--lg, #logo--md, #logo--sm {
+	transition: 0.5s;
+}
+
+#mini-bio {
+	transition: opacity 0.3s;
+}
+
+#back-to-top {
+	visibility: hidden;
+	opacity: 0%;
+	position: fixed;
+	bottom: 30px;
+	right: 1em;
+	z-index: 99;
+	font-size: 50px;
+	border: none;
+	outline: none;
+	background-color: hsl(0, 0%, 0%, 0%);
+	color: red;
+	cursor: pointer;
+	padding: 0;
+	transition: 0.5s;
+}
+
+#back-to-top:hover {
+  color: black;
+}
